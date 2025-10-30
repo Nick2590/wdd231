@@ -1,0 +1,39 @@
+/* Larger screens and layout changes */
+@media (min-width: 768px) {
+
+  body{padding:1.5rem 2rem}
+
+  .site-header{flex-direction:row;align-items:center;justify-content:space-between}
+  .header-inner{gap:1rem}
+
+  /* Show nav horizontally */
+  .primary-nav{display:block}
+  .primary-nav ul{flex-direction:row;gap:1rem}
+  .primary-nav a{padding:.5rem .75rem}
+  .nav-toggle{display:none}
+
+  /* layout - two-column main (not single column) */
+  main#mainContent{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap:2rem;
+    align-items:start;
+  }
+  .hero{grid-column:1 / -1}
+  .certificate{order:0}
+
+  /* courses grid: cards in 2 columns */
+  .courses-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap:1rem;
+  }
+
+  .site-footer{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+  }
+}
+
+/* Prevent horizontal scroll due to focus outlines or big elements */
+*{max-width:100%}

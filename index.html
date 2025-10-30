@@ -1,0 +1,115 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WDD231 — Nicholas Goodsell</title>
+  <meta name="description" content="Course homepage demonstrating HTML, CSS, and JavaScript best practices for WDD231." />
+  <meta name="author" content="Nicholas Goodsell" />
+
+  <!-- Google Font (one family as required) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Small screen / base CSS -->
+  <link rel="stylesheet" href="styles/styles_small.css">
+
+  <!-- Larger CSS (contains media queries) -->
+  <link rel="stylesheet" href="styles/styles_larger.css">
+
+  <!-- JavaScript files loaded with defer as required -->
+  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/course.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Accessible SVG logo -->
+      <a class="logo" href="index.html" aria-label="Course Home">
+        <!-- Replace with your SVG file or inline SVG -->
+        <svg width="48" height="48" viewBox="0 0 24 24" role="img" aria-hidden="false" focusable="false">
+          <title>Site logo</title>
+          <rect width="24" height="24" rx="4" fill="#2b6cb0"></rect>
+          <text x="12" y="16" font-size="10" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif">WDD</text>
+        </svg>
+      </a>
+
+      <span class="author-name" id="authorName">Nicholas Goodsell</span>
+
+      <!-- Hamburger for small screens -->
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+
+    <nav id="primaryNav" class="primary-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber/index.html">Chamber</a></li>
+        <li><a href="final/index.html">Final</a></li>
+        <li><a href="https://github.com/yourgithubusername/wdd231" target="_blank" rel="noopener">Repo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <section class="hero">
+      <h1>Home</h1>
+      <p class="lead">Welcome to the course home page. This page demonstrates semantic HTML, responsive CSS, and accessible JavaScript.</p>
+    </section>
+
+    <section id="certificate" class="certificate">
+      <h2>Certificate: Web & Computer Programming</h2>
+
+      <div class="controls">
+        <div class="filter-buttons" role="group" aria-label="Filter courses">
+          <button data-filter="all" class="filter-btn">All Courses</button>
+          <button data-filter="WDD" class="filter-btn">WDD Courses</button>
+          <button data-filter="CSE" class="filter-btn">CSE Courses</button>
+        </div>
+        <div class="credits-summary" aria-live="polite">Total credits: <span id="totalCredits">0</span></div>
+      </div>
+
+      <div id="coursesContainer" class="courses-grid" aria-live="polite">
+        <!-- course cards inserted here by course.js -->
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About this Project</h2>
+      <p>Layout demonstrates proximity, alignment, repetition, and contrast. Resize the window to see the responsive navigation and grid adapt down to 320px.</p>
+    </section>
+
+    <section id="resources" class="resources">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+        <li><a href="https://web.dev/learn/" target="_blank" rel="noopener">web.dev</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-column">
+      <p>
+        <!-- social links -->
+        <a href="https://github.com/Nick2590" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a> |
+        <a href="https://www.linkedin.com/in/yourprofile/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <p id="copyrightLine">
+        &copy; <span id="copyrightYear"></span> Nicholas Goodsell — Phoenix Arizona
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <p>Last modified: <span id="lastModified">Loading...</span></p>
+    </div>
+  </footer>
+
+</body>
+</html>
