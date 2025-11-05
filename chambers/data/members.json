@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Riverbend Bakery",
+    "address": "123 Main St, River City",
+    "phone": "555-123-4567",
+    "website": "https://riverbendbakery.com",
+    "image": "riverbend-bakery.jpg",
+    "membership": 3,
+    "description": "Fresh artisan bread and pastries daily."
+  },
+  {
+    "name": "Mountain View Hardware",
+    "address": "456 Oak St, River City",
+    "phone": "555-234-5678",
+    "website": "https://mountainviewhardware.com",
+    "image": "mountain-hardware.jpg",
+    "membership": 2,
+    "description": "Everything you need for home repair and outdoor living."
+  },
+  {
+    "name": "River City Fitness",
+    "address": "789 Pine St, River City",
+    "phone": "555-345-6789",
+    "website": "https://rivercityfitness.com",
+    "image": "river-fitness.jpg",
+    "membership": 1,
+    "description": "Your local gym for strength and wellness."
+  },
+  {
+    "name": "Bloom & Co. Florists",
+    "address": "321 Elm St, River City",
+    "phone": "555-456-7890",
+    "website": "https://bloomcoflorists.com",
+    "image": "bloomco.jpg",
+    "membership": 3,
+    "description": "Creating beauty for every occasion."
+  },
+  {
+    "name": "Cedar Grove Accounting",
+    "address": "654 Cedar Rd, River City",
+    "phone": "555-567-8901",
+    "website": "https://cedargroveaccounting.com",
+    "image": "cedar-accounting.jpg",
+    "membership": 2,
+    "description": "Professional tax and business accounting services."
+  },
+  {
+    "name": "Tech Haven Computers",
+    "address": "987 Maple Ave, River City",
+    "phone": "555-678-9012",
+    "website": "https://techhaven.com",
+    "image": "tech-haven.jpg",
+    "membership": 1,
+    "description": "Custom PCs, repairs, and IT support."
+  },
+  {
+    "name": "Pine Valley Tourism Board",
+    "address": "159 Birch Blvd, River City",
+    "phone": "555-789-0123",
+    "website": "https://pinevalleytourism.org",
+    "image": "pine-tourism.jpg",
+    "membership": 3,
+    "description": "Promoting travel and events in the Pine Valley region."
+  }
+]
