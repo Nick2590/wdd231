@@ -1,0 +1,55 @@
+{
+  "families": [
+    {
+      "family_name": "Anderson",
+      "move_in_date": "2025-10-15",
+      "number_of_people": 4,
+      "visited_by_bishopric": true,
+      "members": [
+        {
+          "name": "Michael Anderson",
+          "gender": "Male",
+          "birthdate": "1985-06-20"
+        },
+        {
+          "name": "Sarah Anderson",
+          "gender": "Female",
+          "birthdate": "1987-02-14"
+        },
+        {
+          "name": "Emily Anderson",
+          "gender": "Female",
+          "birthdate": "2012-11-05"
+        },
+        {
+          "name": "Jacob Anderson",
+          "gender": "Male",
+          "birthdate": "2015-09-23"
+        }
+      ]
+    },
+    {
+      "family_name": "Nguyen",
+      "move_in_date": "2025-09-02",
+      "number_of_people": 3,
+      "visited_by_bishopric": false,
+      "members": [
+        {
+          "name": "Thanh Nguyen",
+          "gender": "Male",
+          "birthdate": "1990-08-09"
+        },
+        {
+          "name": "Linh Nguyen",
+          "gender": "Female",
+          "birthdate": "1992-03-18"
+        },
+        {
+          "name": "David Nguyen",
+          "gender": "Male",
+          "birthdate": "2020-01-12"
+        }
+      ]
+    }
+  ]
+}
