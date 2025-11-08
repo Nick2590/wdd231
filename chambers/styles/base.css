@@ -75,6 +75,15 @@ nav a.active {
   border-radius: 8px;
 }
 
+/* Limit image size in list view */
+#member-container.list-view .member-card img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+
 footer p {
   margin: 0.5rem 0;
 }
