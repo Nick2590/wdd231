@@ -1,65 +1,65 @@
 [
   {
-    "name": "Riverbend Bakery",
-    "address": "123 Main St, River City",
-    "phone": "555-123-4567",
-    "website": "https://riverbendbakery.com",
-    "image": "riverbend-bakery.jpg",
+    "name": "Desert Bloom Coffee Co.",
+    "address": "145 E Roosevelt St, Phoenix, AZ",
+    "phone": "602-555-1234",
+    "website": "https://desertbloomcoffee.com",
+    "image": "desertbloom.jpg",
     "membership": 3,
-    "description": "Fresh artisan bread and pastries daily."
+    "description": "Locally roasted coffee and community events in downtown Phoenix."
   },
   {
-    "name": "Mountain View Hardware",
-    "address": "456 Oak St, River City",
-    "phone": "555-234-5678",
-    "website": "https://mountainviewhardware.com",
-    "image": "mountain-hardware.jpg",
+    "name": "Valley Tech Solutions",
+    "address": "2300 N Central Ave, Phoenix, AZ",
+    "phone": "602-555-5678",
+    "website": "https://valleytechaz.com",
+    "image": "valleytech.jpg",
     "membership": 2,
-    "description": "Everything you need for home repair and outdoor living."
+    "description": "IT and cybersecurity experts serving Arizona businesses."
   },
   {
-    "name": "River City Fitness",
-    "address": "789 Pine St, River City",
-    "phone": "555-345-6789",
-    "website": "https://rivercityfitness.com",
-    "image": "river-fitness.jpg",
+    "name": "Sonoran Landscaping",
+    "address": "4800 W Camelback Rd, Phoenix, AZ",
+    "phone": "602-555-9012",
+    "website": "https://sonoranlandscaping.com",
+    "image": "sonoranlandscaping.jpg",
     "membership": 1,
-    "description": "Your local gym for strength and wellness."
+    "description": "Professional desert landscaping and maintenance services."
   },
   {
-    "name": "Bloom & Co. Florists",
-    "address": "321 Elm St, River City",
-    "phone": "555-456-7890",
-    "website": "https://bloomcoflorists.com",
-    "image": "bloomco.jpg",
+    "name": "Copper Sky Real Estate",
+    "address": "102 N 7th Ave, Phoenix, AZ",
+    "phone": "602-555-3456",
+    "website": "https://copperskyrealty.com",
+    "image": "coppersky.jpg",
     "membership": 3,
-    "description": "Creating beauty for every occasion."
+    "description": "Your trusted partner for buying and selling homes in the Valley."
   },
   {
-    "name": "Cedar Grove Accounting",
-    "address": "654 Cedar Rd, River City",
-    "phone": "555-567-8901",
-    "website": "https://cedargroveaccounting.com",
-    "image": "cedar-accounting.jpg",
+    "name": "Downtown Fitness Club",
+    "address": "215 W Washington St, Phoenix, AZ",
+    "phone": "602-555-7890",
+    "website": "https://downtownfitnessphx.com",
+    "image": "downtownfitness.jpg",
+    "membership": 1,
+    "description": "Modern gym and wellness community in downtown Phoenix."
+  },
+  {
+    "name": "Saguaro Accounting Group",
+    "address": "1700 E Thomas Rd, Phoenix, AZ",
+    "phone": "602-555-2222",
+    "website": "https://saguaroaccounting.com",
+    "image": "saguaroaccounting.jpg",
     "membership": 2,
-    "description": "Professional tax and business accounting services."
+    "description": "Trusted accounting and tax solutions for local businesses."
   },
   {
-    "name": "Tech Haven Computers",
-    "address": "987 Maple Ave, River City",
-    "phone": "555-678-9012",
-    "website": "https://techhaven.com",
-    "image": "tech-haven.jpg",
-    "membership": 1,
-    "description": "Custom PCs, repairs, and IT support."
-  },
-  {
-    "name": "Pine Valley Tourism Board",
-    "address": "159 Birch Blvd, River City",
-    "phone": "555-789-0123",
-    "website": "https://pinevalleytourism.org",
-    "image": "pine-tourism.jpg",
+    "name": "Phoenix Art Collective",
+    "address": "50 N 2nd Ave, Phoenix, AZ",
+    "phone": "602-555-3333",
+    "website": "https://phxartcollective.org",
+    "image": "phxartcollective.jpg",
     "membership": 3,
-    "description": "Promoting travel and events in the Pine Valley region."
+    "description": "Connecting Phoenix artists through exhibits and workshops."
   }
 ]

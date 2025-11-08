@@ -1,4 +1,4 @@
-// Fetch member data
+// Fetch and display members
 async function getMembers() {
   const response = await fetch("data/members.json");
   const members = await response.json();
@@ -19,15 +19,14 @@ function displayMembers(members) {
       <p>${member.address}</p>
       <p>${member.phone}</p>
       <a href="${member.website}" target="_blank">Visit Website</a>
-      <p class="membership-level">Level: ${["Member","Silver","Gold"][member.membership-1]}</p>
+      <p class="membership-level">Membership: ${["Member","Silver","Gold"][member.membership-1]}</p>
       <p>${member.description}</p>
     `;
-
     container.appendChild(card);
   });
 }
 
-// Grid/List view toggle
+// View toggle buttons
 document.getElementById("grid-view").addEventListener("click", () => {
   document.getElementById("member-container").classList.replace("list-view", "grid-view");
 });
@@ -36,9 +35,9 @@ document.getElementById("list-view").addEventListener("click", () => {
   document.getElementById("member-container").classList.replace("grid-view", "list-view");
 });
 
-// Footer date info
+// Footer updates
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// Run
+// Run script
 getMembers();
