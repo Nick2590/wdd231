@@ -4,16 +4,16 @@
     "address": "1820 W Deer Valley, Phoenix, AZ",
     "phone": "602-555-1234",
     "website": "https://3gconstruction.com",
-    "image": "3g.jpg",
+    "image": "3g_logo.jpg",
     "membership": 3,
-    "description": "Local home building company all across Arizona."
+    "description": "Local home building company all across."
   },
   {
     "name": "Valley Tech Solutions",
     "address": "2300 N Central Ave, Phoenix, AZ",
     "phone": "602-555-5678",
     "website": "https://valleytechaz.com",
-    "image": "valleytech.jpg",
+    "image": "vts_logo.jpg",
     "membership": 2,
     "description": "IT and cybersecurity experts serving Arizona businesses."
   },
@@ -22,7 +22,7 @@
     "address": "4800 W Camelback Rd, Phoenix, AZ",
     "phone": "602-555-9012",
     "website": "https://sonoranlandscaping.com",
-    "image": "sonoranlandscaping.jpg",
+    "image": "sonoran_logo.jpg",
     "membership": 1,
     "description": "Professional desert landscaping and maintenance services."
   },
@@ -31,7 +31,7 @@
     "address": "102 N 7th Ave, Phoenix, AZ",
     "phone": "602-555-3456",
     "website": "https://copperskyrealty.com",
-    "image": "coppersky.jpg",
+    "image": "copper_logo.jpg",
     "membership": 3,
     "description": "Your trusted partner for buying and selling homes in the Valley."
   },
@@ -40,7 +40,7 @@
     "address": "215 W Washington St, Phoenix, AZ",
     "phone": "602-555-7890",
     "website": "https://downtownfitnessphx.com",
-    "image": "downtownfitness.jpg",
+    "image": "dfc_logo.jpg",
     "membership": 1,
     "description": "Modern gym and wellness community in downtown Phoenix."
   },
@@ -49,7 +49,7 @@
     "address": "1700 E Thomas Rd, Phoenix, AZ",
     "phone": "602-555-2222",
     "website": "https://saguaroaccounting.com",
-    "image": "saguaroaccounting.jpg",
+    "image": "saguaro_logo.jpg",
     "membership": 2,
     "description": "Trusted accounting and tax solutions for local businesses."
   },
@@ -58,7 +58,7 @@
     "address": "50 N 2nd Ave, Phoenix, AZ",
     "phone": "602-555-3333",
     "website": "https://phxartcollective.org",
-    "image": "phxartcollective.jpg",
+    "image": "phoenix_art_logo.jpg",
     "membership": 3,
     "description": "Connecting Phoenix artists through exhibits and workshops."
   }
