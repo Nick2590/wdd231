@@ -1,5 +1,4 @@
-// spotlights.js - Random gold/silver member spotlights for Phoenix Chamber
-
+// spotlights.js - Fetch and display spotlight members
 const spotlightContainer = document.querySelector('#spotlight-container');
 
 async function loadSpotlights() {
@@ -8,7 +7,7 @@ async function loadSpotlights() {
         const members = await response.json();
 
         // Filter only Gold (3) and Silver (2) members
-        const premiumMembers = members.filter(m => m.membershipLevel >= 2);
+        const premiumMembers = members.filter(m => m.membership >= 2);
 
         // Randomly shuffle
         const shuffled = premiumMembers.sort(() => Math.random() - 0.5);
@@ -26,8 +25,8 @@ async function loadSpotlights() {
                     <p>${m.phone}</p>
                     <p>${m.address}</p>
                     <a href="${m.website}" target="_blank">Visit Website</a>
-                    <p class="level level-${m.membershipLevel}">
-                        ${m.membershipLevel === 3 ? 'Gold Member' : 'Silver Member'}
+                    <p class="level level-${m.membership}">
+                        ${m.membership === 3 ? 'Gold Member' : 'Silver Member'}
                     </p>
                 </div>
             `;
