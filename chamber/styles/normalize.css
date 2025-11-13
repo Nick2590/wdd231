@@ -1,0 +1,44 @@
+/* normalize.css - Minimal reset for Phoenix Chamber Project */
+
+/* Remove default margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set default font inheritance */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+}
+
+/* Remove list styling */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images scale properly */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Buttons inherit font */
+button {
+  font: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}

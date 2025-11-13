@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phoenix Chamber of Commerce | Home</title>
+    <meta name="description" content="Phoenix Arizona Chamber of Commerce home page - business resources, events, and community support." />
+    <meta name="author" content="Nicholas Goodsell" />
+
+    <!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Phoenix Chamber of Commerce" />
+    <meta property="og:description" content="Supporting businesses and economic growth across Phoenix, Arizona." />
+    <meta property="og:image" content="images/phoenix-hero.jpg" />
+    <meta property="og:url" content="https://your-domain.com/chamber/index.html" />
+
+    <link rel="icon" href="images/favicon.ico" />
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <script defer src="scripts/header-footer.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/spotlights.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/phoenix_logo.webp" alt="Phoenix Chamber Logo" class="logo" />
+        <h1>Phoenix Chamber of Commerce</h1>
+        <button id="menu-button">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <img src="images/phoenix_skyline.jpg" alt="Phoenix Skyline" />
+            <div class="hero-text">
+                <h2>Welcome to the Phoenix Chamber of Commerce</h2>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- EVENTS SECTION -->
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li><strong>Business Networking Breakfast</strong> – March 3rd</li>
+                <li><strong>Startup Incubator Meetup</strong> – March 12th</li>
+                <li><strong>Local Business Expo</strong> – March 25th</li>
+            </ul>
+        </section>
+
+        <!-- WEATHER SECTION -->
+        <section class="weather">
+            <h2>Current Weather</h2>
+            <p>Temperature: <span id="current-temp"></span></p>
+            <figure>
+                <img id="weather-icon" alt="Weather icon" />
+                <figcaption id="weather-desc"></figcaption>
+            </figure>
+            <div id="forecast"></div>
+        </section>
+
+        <!-- SPOTLIGHTS SECTION -->
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container" class="spotlight-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Phoenix Chamber of Commerce</p>
+        <p>Nicholas Goodsell | WDD 231</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
