@@ -1,90 +1,221 @@
+/* ---------------------------------------------------------
+   Phoenix Chamber of Commerce - CLEAN & FIXED CSS
+   All layouts centered, responsive, and consistent
+--------------------------------------------------------- */
+
+/* RESET */
+* {
+    box-sizing: border-box;
+}
 body {
-  font-family: "Segoe UI", sans-serif;
-  margin: 0;
-  background-color: #f7f5f2;
-  color: #222;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
 }
 
-header, footer {
-  background-color: #b85c38;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
+/* ---------------------------------------------------------
+   HEADER
+--------------------------------------------------------- */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 1rem 2rem;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header .logo {
+    width: 80px;
+    height: auto;
+}
+header h1 {
+    font-size: 1.6rem;
+    margin: 0;
+}
 nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0;
-  margin: 0.5rem 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
 }
-
 nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
-
 nav a.active {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-.view-toggle {
-  text-align: center;
-  margin: 1rem;
+/* ---------------------------------------------------------
+   MAIN CONTENT WRAPPER
+--------------------------------------------------------- */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
 }
 
-.view-toggle button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #f4a261;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+/* ---------------------------------------------------------
+   BUTTONS
+--------------------------------------------------------- */
+button, .cta-button {
+    background-color: #0080ff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+button:hover, .cta-button:hover {
+    background-color: #0059b3;
 }
 
+/* ---------------------------------------------------------
+   MEMBER DIRECTORY LAYOUTS
+--------------------------------------------------------- */
+
+/* FULLY FIXED — layout is now centered and responsive */
+#member-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* Grid view */
 #member-container.grid-view {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    justify-items: center;
 }
 
+/* List view */
 #member-container.list-view {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.member-card {
-  background: white;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+#member-container.list-view .member-card {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    max-width: 900px;
+
+    padding: 1rem;
+    margin: 0 auto; /* Center in list view */
+    text-align: left;
 }
 
-.member-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Limit image size in list view */
 #member-container.list-view .member-card img {
-  width: 120px;
-  height: auto;
-  border-radius: 8px;
-  margin-right: 1rem;
+    width: 120px;
+    height: auto;
+    margin-right: 1rem;
+    flex-shrink: 0;
 }
 
+/* ---------------------------------------------------------
+   MEMBER + SPOTLIGHT CARDS
+--------------------------------------------------------- */
+.member-card,
+.spotlight-card {
+    background: white;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
 
-footer p {
-  margin: 0.5rem 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+
+    text-align: center;
 }
 
+.member-card img,
+.spotlight-card img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.member-card h3,
+.spotlight-card h3 {
+    margin: 0.5rem 0;
+}
+
+.member-card p,
+.spotlight-card p,
+.member-card a,
+.spotlight-card a {
+    margin: 0.25rem 0;
+}
+
+.level {
+    font-weight: bold;
+}
+.level-3 { color: goldenrod; }
+.level-2 { color: silver; }
+.level-1 { color: #555; }
+
+/* ---------------------------------------------------------
+   HERO SECTION
+--------------------------------------------------------- */
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.hero img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+/* ---------------------------------------------------------
+   EVENTS / WEATHER / SPOTLIGHT SECTIONS
+--------------------------------------------------------- */
+.events,
+.weather,
+.spotlights {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
