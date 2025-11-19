@@ -1,39 +1,136 @@
-/* Larger screens and layout changes */
+/* ========= BASE LAYOUT (Larger Screens) ========= */
 @media (min-width: 768px) {
 
-  body{padding:1.5rem 2rem}
+  body {
+    padding: 1.5rem 2rem;
+  }
 
-  .site-header{flex-direction:row;align-items:center;justify-content:space-between}
-  .header-inner{gap:1rem}
+  /* HEADER */
+  .site-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-  /* Show nav horizontally */
-  .primary-nav{display:block}
-  .primary-nav ul{flex-direction:row;gap:1rem}
-  .primary-nav a{padding:.5rem .75rem}
-  .nav-toggle{display:none}
+  .header-inner {
+    gap: 1rem;
+  }
 
-  /* layout - two-column main (not single column) */
-  main#mainContent{
-    display:grid;
+  .primary-nav {
+    display: block;
+  }
+
+  .primary-nav ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .primary-nav a {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  /* MAIN TWO-COLUMN LAYOUT */
+  main#mainContent {
+    display: grid;
     grid-template-columns: 2fr 1fr;
-    gap:2rem;
-    align-items:start;
+    gap: 2rem;
+    align-items: start;
   }
-  .hero{grid-column:1 / -1}
-  .certificate{order:0}
 
-  /* courses grid: cards in 2 columns */
-  .courses-grid{
+  /* Hero full-width */
+  .hero {
+    grid-column: 1 / -1;
+  }
+
+  /* Course grid */
+  .courses-grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap:1rem;
+    gap: 1rem;
   }
 
-  .site-footer{
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:center;
+  /* FOOTER */
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
-/* Prevent horizontal scroll due to focus outlines or big elements */
-*{max-width:100%}
+/* ========= GLOBAL PREVENT OVERFLOW ========= */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ========= COURSE CARD STYLING ========= */
+.course-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover,
+.course-card:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+/* ========= FILTER BUTTONS ========= */
+.filter-btn {
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  background: #1a4d81;
+  outline: none;
+}
+
+/* ========= MODAL DIALOG ========= */
+#course-details {
+  font-family: 'Inter', sans-serif;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  background: white;
+}
+
+/* Backdrop styling */
+#course-details::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Close button */
+#course-details button.close-btn {
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#course-details button.close-btn:hover {
+  background: #1a4d81;
+}

@@ -1,85 +1,90 @@
-// course.js
-document.addEventListener('DOMContentLoaded', () => {
-  // COPY/PASTE your official array here if you have it. This is a representative sample.
-  const courses = [
-    { id: 1, code: "WDD101", title: "Intro to Web Design", type: "WDD", credits: 3, completed: true },
-    { id: 2, code: "WDD131", title: "HTML & CSS", type: "WDD", credits: 4, completed: true },
-    { id: 3, code: "WDD231", title: "Responsive Design", type: "WDD", credits: 3, completed: false },
-    { id: 4, code: "CSE111", title: "Intro to Programming", type: "CSE", credits: 3, completed: true },
-    { id: 5, code: "CSE121", title: "Data Structures", type: "CSE", credits: 4, completed: false }
-  ];
+// ========= COURSE DATA ========= //
+const courses = [
+  {
+    subject: "WDD",
+    number: "130",
+    title: "Web Fundamentals",
+    credits: 3,
+    description: "Introduction to web development concepts including HTML and CSS.",
+    certificate: "Web & Computer Programming",
+    techStack: "HTML, CSS"
+  },
+  {
+    subject: "CSE",
+    number: "110",
+    title: "Programming Basics",
+    credits: 2,
+    description: "Fundamentals of programming logic and structure.",
+    certificate: "Web & Computer Programming",
+    techStack: "Python, JavaScript"
+  }
+  // Add all your course objects here...
+];
 
-  // If your instructor provided a different/more complete array, replace the sample above.
-  // The user should edit completed:true/false per course.
 
-  const coursesContainer = document.getElementById('coursesContainer');
-  const totalCreditsEl = document.getElementById('totalCredits');
-  const filterButtons = document.querySelectorAll('.filter-btn');
+// ========= DYNAMIC COURSE BUILD ========= //
+const coursesContainer = document.getElementById("coursesContainer");
+const totalCreditsSpan = document.getElementById("totalCredits");
 
-  function renderCourses(list) {
-    coursesContainer.innerHTML = '';
-    if (!list.length) {
-      coursesContainer.innerHTML = '<p>No courses to display.</p>';
-      totalCreditsEl.textContent = '0';
-      return;
-    }
+function buildCourses(filter = "all") {
+  coursesContainer.innerHTML = "";
+  let totalCredits = 0;
 
-    list.forEach(course => {
-      const card = document.createElement('article');
-      card.className = 'course-card';
-      if (course.completed) card.classList.add('completed');
-      card.setAttribute('tabindex','0'); // keyboard focusable
+  courses
+    .filter(course => filter === "all" || course.subject === filter)
+    .forEach(course => {
+      totalCredits += course.credits;
 
-      const title = document.createElement('h3');
-      title.textContent = `${course.code} — ${course.title}`;
+      const card = document.createElement("div");
+      card.classList.add("course-card");
+      card.setAttribute("tabindex", "0"); // Keyboard accessibility
 
-      const meta = document.createElement('div');
-      meta.className = 'meta';
-      meta.textContent = `${course.type} • ${course.credits} credits`;
+      card.innerHTML = `
+        <h3>${course.subject} ${course.number}</h3>
+        <p>${course.title}</p>
+        <p><strong>${course.credits} credits</strong></p>
+      `;
 
-      const status = document.createElement('div');
-      status.className = 'status';
-      status.textContent = course.completed ? 'Completed' : 'In progress';
+      // Add click event to open modal
+      card.addEventListener("click", () => displayCourseDetails(course));
 
-      if (course.completed) {
-        status.setAttribute('aria-label','Course completed');
-      } else {
-        status.setAttribute('aria-label','Course not completed');
-      }
-
-      card.appendChild(title);
-      card.appendChild(meta);
-      card.appendChild(status);
       coursesContainer.appendChild(card);
     });
 
-    // Update total credits using reduce on the currently displayed list
-    const totalCredits = list.reduce((sum, c) => sum + Number(c.credits || 0), 0);
-    totalCreditsEl.textContent = totalCredits;
-  }
+  totalCreditsSpan.textContent = totalCredits;
+}
 
-  // Filters
-  function filterHandler(filter) {
-    if (filter === 'all') renderCourses(courses);
-    else {
-      const filtered = courses.filter(c => c.type === filter);
-      renderCourses(filtered);
-    }
-  }
-
-  // Wire filter buttons
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const filter = e.currentTarget.getAttribute('data-filter');
-      // visually mark active button
-      filterButtons.forEach(b => b.classList.remove('active'));
-      e.currentTarget.classList.add('active');
-      filterHandler(filter);
-    });
+// ========= FILTER BUTTONS ========= //
+document.querySelectorAll(".filter-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const filterValue = button.getAttribute("data-filter");
+    buildCourses(filterValue);
   });
-
-  // Initial render: All
-  const defaultBtn = document.querySelector('.filter-btn[data-filter="all"]');
-  if (defaultBtn) defaultBtn.classList.add('active');
-  renderCourses(courses);
 });
+
+// ========= MODAL FUNCTIONALITY ========= //
+function displayCourseDetails(course) {
+  const modal = document.getElementById("course-details");
+
+  modal.innerHTML = `
+    <h3>${course.subject} ${course.number}: ${course.title}</h3>
+    <p><strong>Credits:</strong> ${course.credits}</p>
+    <p><strong>Description:</strong> ${course.description}</p>
+    <p><strong>Certificate:</strong> ${course.certificate}</p>
+    <p><strong>Tech Stack:</strong> ${course.techStack}</p>
+    <button class="close-btn" id="closeDialog">Close</button>
+  `;
+
+  modal.showModal();
+
+  // Close via button
+  document.getElementById("closeDialog").addEventListener("click", () => modal.close());
+
+  // Close by clicking outside modal
+  modal.addEventListener("click", event => {
+    if (event.target === modal) modal.close();
+  });
+}
+
+// ========= INITIAL LOAD ========= //
+buildCourses();
