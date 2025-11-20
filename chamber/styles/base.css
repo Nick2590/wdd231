@@ -210,6 +210,33 @@ button:hover, .cta-button:hover {
 }
 
 /* ---------------------------------------------------------
+   benefit cards
+--------------------------------------------------------- */
+
+.benefit-card {
+    background-color: #004080;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideIn 1s forwards;
+}
+.benefit-card:nth-child(2) { animation-delay: 0.3s; }
+.benefit-card:nth-child(3) { animation-delay: 0.6s; }
+.benefit-card:nth-child(4) { animation-delay: 0.9s; }
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------------------------------------------------------
    FOOTER
 --------------------------------------------------------- */
 footer {
