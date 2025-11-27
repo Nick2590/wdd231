@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Discover Phoenix | Phoenix Chamber</title>
+  <meta name="description" content="Discover attractions and features in Phoenix, Arizona." />
+  <meta name="author" content="Nicholas Goodsell" />
+
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/discover.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <script defer src="scripts/header-footer.js"></script>
+  <script type="module" defer src="scripts/discover.js"></script>
+</head>
+<body>
+  <header>
+    <img src="images/phoenix_logo.webp" alt="Phoenix Chamber Logo" class="logo" />
+    <h1>Phoenix Chamber of Commerce</h1>
+    <button id="menu-button">☰</button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="discover-intro">
+      <h2>Discover Phoenix</h2>
+      <p>Representative attractions, cultural highlights, parks, and points of interest in the Phoenix metro area.</p>
+
+      <div id="visit-message" class="visit-message" aria-live="polite"></div>
+    </section>
+
+    <section class="discover-grid" id="discover-grid" aria-label="Places of interest">
+      <!-- Cards will be injected here by scripts/discover.js -->
+    </section>
+  </main>
+
+  <dialog id="learn-modal" aria-labelledby="learn-title">
+    <h3 id="learn-title"></h3>
+    <figure id="learn-figure">
+      <img id="learn-img" src="" alt="" />
+      <figcaption id="learn-caption"></figcaption>
+    </figure>
+    <p id="learn-desc"></p>
+    <p><strong>Address:</strong> <span id="learn-address"></span></p>
+    <button id="close-learn">Close</button>
+  </dialog>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> Phoenix Chamber of Commerce</p>
+    <p>Nicholas Goodsell | WDD 231</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+</body>
+</html>

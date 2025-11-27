@@ -1,0 +1,145 @@
+/* styles/discover.css
+   Grid-areas based layout for discover.html
+   small: single-column, medium: 2-column, large: named areas
+*/
+
+/* Basic card styles (base.css already provides card styles, but add specifics here) */
+.discover-intro {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.visit-message {
+  margin-top: 0.5rem;
+  color: #004080;
+  font-weight: 600;
+}
+
+/* GRID CONTAINER */
+.discover-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+/* Card */
+.discover-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+.discover-card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+.discover-card figure {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+.discover-card img {
+  width: 100%;
+  height: 200px; /* target ~300x200 ratio */
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+.discover-card address {
+  font-style: normal;
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+.discover-card p {
+  margin: 0.5rem 0;
+}
+.discover-card .learn-btn {
+  margin-top: 0.5rem;
+  background: #0080ff;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Prevent hover effects on small screens; only apply on medium+ */
+@media (min-width: 641px) {
+  /* image hover effect */
+  .discover-card figure img {
+    transition: transform 300ms ease, filter 300ms ease;
+  }
+  .discover-card figure img:hover {
+    transform: scale(1.03);
+    filter: brightness(0.95) saturate(1.05);
+  }
+}
+
+/* MEDIUM SCREENS (641px - 1024px): two-column flow */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding: 0;
+  }
+}
+
+/* LARGE SCREENS (1025px and up): named grid areas */
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "a a b b c c"
+      "d d e f g h";
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  /* map area names to cards (a..h) */
+  .discover-grid > article:nth-child(1) { grid-area: a; }
+  .discover-grid > article:nth-child(2) { grid-area: b; }
+  .discover-grid > article:nth-child(3) { grid-area: c; }
+  .discover-grid > article:nth-child(4) { grid-area: d; }
+  .discover-grid > article:nth-child(5) { grid-area: e; }
+  .discover-grid > article:nth-child(6) { grid-area: f; }
+  .discover-grid > article:nth-child(7) { grid-area: g; }
+  .discover-grid > article:nth-child(8) { grid-area: h; }
+
+  /* make area 'a' wider appearance (already spans 2 columns above) */
+  .discover-card { max-width: none; }
+}
+
+/* Fix layout shifting & force proper centering */
+main,
+.discover-grid {
+  width: 100%;
+  max-width: 1200px;              /* prevents huge stretch or tiny squeeze */
+  margin: 0 auto !important;      /* true horizontal centering */
+  display: block !important;      
+  float: none !important;         /* override any float */
+}
+
+.discover-grid {
+  display: grid !important;
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Fix overlapping by enforcing min width */
+.discover-card {
+  min-width: 280px;
+  width: 100%;
+  max-width: 100%;
+}
+/* Prevent oversized images from breaking layout */
+.member-card img,
+.spotlight-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
