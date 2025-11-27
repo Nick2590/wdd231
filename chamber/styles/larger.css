@@ -105,3 +105,12 @@
         filter: none;
     }
 }
+#discover-container {
+    width: 100%;
+    max-width: 1200px; /* container won't exceed this */
+    margin: 0 auto;    /* center horizontally */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* responsive */
+    gap: 1.5rem;
+    justify-items: center;  /* center cards inside grid */
+}
