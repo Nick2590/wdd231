@@ -1,5 +1,5 @@
 // data/discoverItems.mjs
-export const items = [
+const discoverItems = [
   {
     id: "camelback",
     title: "Camelback Mountain",
@@ -57,3 +57,5 @@ export const items = [
     description: "Downtown stadium that hosts pro baseball, concerts, and major community events."
   }
 ];
+
+export default discoverItems;
