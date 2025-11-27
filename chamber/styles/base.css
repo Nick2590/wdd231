@@ -207,6 +207,8 @@ button:hover, .cta-button:hover {
     margin-bottom: 2rem;
     border-radius: 12px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    justify-items: center;
 }
 
 /* ---------------------------------------------------------
@@ -245,4 +247,20 @@ footer {
     text-align: center;
     padding: 1.5rem;
     margin-top: 2rem;
+}
+#menu-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menu-button {
+        display: block;
+    }
+    nav ul {
+        display: none; /* hide nav on mobile */
+        flex-direction: column;
+    }
+    nav.open ul {
+        display: flex; /* show when menu is toggled */
+    }
 }
