@@ -1,0 +1,137 @@
+[
+  {
+    "id": "res01",
+    "title": "Newborn Sleep Guide",
+    "category": "Health & Development",
+    "url": "https://example.com/newborn-sleep-guide",
+    "image": "images/sleep.jpg",
+    "source": "Example Health",
+    "description": "A trusted guide for helping newborns develop healthy sleep patterns and routines."
+  },
+  {
+    "id": "res02",
+    "title": "Breastfeeding Basics",
+    "category": "Feeding",
+    "url": "https://example.com/breastfeeding-basics",
+    "image": "images/breastfeeding.jpg",
+    "source": "Lactation Org",
+    "description": "Practical tips for successful breastfeeding, positions, common issues, and support resources."
+  },
+  {
+    "id": "res03",
+    "title": "Baby Gear Checklist",
+    "category": "Gear",
+    "url": "https://example.com/baby-gear-checklist",
+    "image": "images/gear.jpg",
+    "source": "Smart Parent",
+    "description": "A concise checklist of essential baby gear, what to buy now and what you can wait on."
+  },
+  {
+    "id": "res04",
+    "title": "Pediatrician Visit Guide",
+    "category": "Health & Development",
+    "url": "https://example.com/pediatrician-visit",
+    "image": "images/pediatrician.jpg",
+    "source": "Child Health",
+    "description": "What to expect at newborn checkups, common vaccines, and questions to ask your pediatrician."
+  },
+  {
+    "id": "res05",
+    "title": "Safe Sleep Practices",
+    "category": "Safety",
+    "url": "https://example.com/safe-sleep",
+    "image": "images/safesleep.jpg",
+    "source": "Safety Foundation",
+    "description": "Evidence-based safe sleep recommendations to lower the risk of SIDS and keep infants safe."
+  },
+  {
+    "id": "res06",
+    "title": "Diapering 101",
+    "category": "Care",
+    "url": "https://example.com/diapering-101",
+    "image": "images/diaper.jpg",
+    "source": "Parenting Hub",
+    "description": "How to change diapers, tips for preventing rash, and eco-friendly diapering options."
+  },
+  {
+    "id": "res07",
+    "title": "Car Seat Buying Guide",
+    "category": "Gear",
+    "url": "https://example.com/car-seat-guide",
+    "image": "images/carseat.jpg",
+    "source": "Travel Safe",
+    "description": "How to choose a car seat, install it correctly, and the laws to know for your area."
+  },
+  {
+    "id": "res08",
+    "title": "Postpartum Recovery Tips",
+    "category": "Health & Wellness",
+    "url": "https://example.com/postpartum-recovery",
+    "image": "images/postpartum.jpg",
+    "source": "Mom Care",
+    "description": "Physical and emotional recovery tips for the postpartum period, including support resources."
+  },
+  {
+    "id": "res09",
+    "title": "Feeding Schedules",
+    "category": "Feeding",
+    "url": "https://example.com/feeding-schedules",
+    "image": "images/feeding.jpg",
+    "source": "Nutrition for Babies",
+    "description": "Examples of feeding schedules for newborns and how to identify hunger cues."
+  },
+  {
+    "id": "res10",
+    "title": "Infant CPR Quick Guide",
+    "category": "Safety",
+    "url": "https://example.com/infant-cpr",
+    "image": "images/cpr.jpg",
+    "source": "First Aid Org",
+    "description": "Step-by-step instructions on infant CPR and emergency response basics."
+  },
+  {
+    "id": "res11",
+    "title": "Swaddling Techniques",
+    "category": "Care",
+    "url": "https://example.com/swaddling",
+    "image": "images/swaddle.jpg",
+    "source": "Baby Care",
+    "description": "Safe swaddling methods and when to stop swaddling your baby."
+  },
+  {
+    "id": "res12",
+    "title": "Budgeting for Baby",
+    "category": "Planning",
+    "url": "https://example.com/budgeting-baby",
+    "image": "images/budget.jpg",
+    "source": "Finance for Families",
+    "description": "A practical guide to planning finances, saving, and estimating first-year costs."
+  },
+  {
+    "id": "res13",
+    "title": "Preparing Your Home",
+    "category": "Planning",
+    "url": "https://example.com/prepare-home",
+    "image": "images/homeprep.jpg",
+    "source": "Home & Family",
+    "description": "Room setup, safety checks, and items to have ready before baby arrives."
+  },
+  {
+    "id": "res14",
+    "title": "Newborn Bathing Tips",
+    "category": "Care",
+    "url": "https://example.com/newborn-bathing",
+    "image": "images/bath.jpg",
+    "source": "Healthy Baby",
+    "description": "How to bathe a newborn safely and gently, plus recommended products."
+  },
+  {
+    "id": "res15",
+    "title": "Mental Health for New Parents",
+    "category": "Health & Wellness",
+    "url": "https://example.com/parent-mental-health",
+    "image": "images/mentalhealth.jpg",
+    "source": "Wellness Center",
+    "description": "Recognizing postpartum depression and anxiety and where to seek help."
+  }
+]

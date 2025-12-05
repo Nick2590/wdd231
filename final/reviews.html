@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Parent Prep Hub — Reviews</title>
+  <meta name="description" content="Real parent reviews and experiences. Share your review.">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Parent Prep Hub — Reviews">
+  <meta property="og:description" content="Read and submit reviews from other parents.">
+  <meta property="og:image" content="images/og-reviews.jpg">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body data-page="reviews">
+  <header class="site-header">
+    <div class="brand"><a href="index.html" class="logo">Parent Prep Hub</a></div>
+    <button id="menu-toggle" aria-controls="main-nav" aria-expanded="false">☰</button>
+    <nav id="main-nav" class="main-nav" hidden>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="resources.html" class="nav-link">Resources</a>
+      <a href="reviews.html" class="nav-link">Reviews</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Parent Experiences</h1>
+    <p>Read reviews from other soon-to-be parents and add your own.</p>
+
+    <section id="reviews-controls">
+      <label>
+        Filter by rating:
+        <select id="filter-rating">
+          <option value="">All</option>
+          <option value="5">5 stars</option>
+          <option value="4">4 stars</option>
+          <option value="3">3 stars</option>
+          <option value="2">2 stars</option>
+          <option value="1">1 star</option>
+        </select>
+      </label>
+    </section>
+
+    <section id="reviews-list" class="reviews-list" aria-live="polite">
+      <!-- reviews rendered here -->
+    </section>
+
+    <section class="review-form">
+      <h2>Submit a Review</h2>
+      <!-- Use GET to make review data visible on the form-action page (easy to display) -->
+      <form id="review-form" method="GET" action="form-action.html">
+        <label for="name">Name (required)</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="rating">Rating (1-5)</label>
+        <select id="rating" name="rating" required>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+
+        <label for="category">Category</label>
+        <select id="category" name="category">
+          <option>Product</option>
+          <option>Advice</option>
+          <option>Service</option>
+        </select>
+
+        <label for="content">Review</label>
+        <textarea id="content" name="content" rows="4" required></textarea>
+
+        <button type="submit" class="btn">Submit Review</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Parent Prep Hub — <a href="attributions.html">Attributions</a></p>
+    <p><a href="https://youtube.com" target="_blank" rel="noopener">Video demo (link)</a></p>
+  </footer>
+
+  <dialog id="modal" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <button class="btn-close" aria-label="Close">✕</button>
+    <h2 id="modal-title"></h2>
+    <div id="modal-desc"></div>
+  </dialog>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

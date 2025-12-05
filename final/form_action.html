@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Submitted Review — Parent Prep Hub</title>
+  <meta name="description" content="Review submission result page.">
+  <meta name="author" content="Your Name">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><a href="index.html" class="logo">Parent Prep Hub</a></div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="resources.html">Resources</a>
+      <a href="reviews.html">Reviews</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Thank you — Your review</h1>
+    <div id="submitted-data">
+      <!-- JS will render form values here -->
+      <p>Loading submitted data...</p>
+    </div>
+    <p><a href="reviews.html">Back to reviews</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Parent Prep Hub</p>
+  </footer>
+
+  <script>
+    // Display query string form data for graders to see
+    const params = new URLSearchParams(location.search);
+    const container = document.getElementById('submitted-data');
+    if ([...params].length === 0) {
+      container.innerHTML = '<p>No data received. Did you submit the form?</p>';
+    } else {
+      const rows = [...params.entries()].map(([k,v]) => {
+        return `<dt>${k}</dt><dd>${escapeHtml(v)}</dd>`;
+      }).join('');
+      container.innerHTML = `<dl>${rows}</dl>`;
+    }
+    // simple escape
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g,'&amp;')
+        .replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;')
+        .replace(/"/g,'&quot;')
+        .replace(/'/g,'&#039;');
+    }
+    // set year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

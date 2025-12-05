@@ -1,0 +1,26 @@
+[
+  {
+    "id": "rev01",
+    "name": "Jessica",
+    "rating": 5,
+    "category": "Advice",
+    "content": "Parent Prep Hub helped us prepare a checklist we actually used — saved us time and stress!",
+    "date": 1698806400
+  },
+  {
+    "id": "rev02",
+    "name": "Mark",
+    "rating": 4,
+    "category": "Product",
+    "content": "The gear guide pointed us to an affordable car seat we love. Solid recommendations.",
+    "date": 1698892800
+  },
+  {
+    "id": "rev03",
+    "name": "Aisha",
+    "rating": 5,
+    "category": "Care",
+    "content": "Loved the swaddling tips and newborn bathing guide—very practical and easy to follow.",
+    "date": 1698979200
+  }
+]

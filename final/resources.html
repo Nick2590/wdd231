@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Parent Prep Hub — Resources</title>
+  <meta name="description" content="Curated resources for expecting parents. Articles, gear, and expert links.">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Parent Prep Hub — Resources">
+  <meta property="og:description" content="Curated resources for expecting parents.">
+  <meta property="og:image" content="images/og-resources.jpg">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body data-page="resources">
+  <header class="site-header">
+    <div class="brand"><a href="index.html" class="logo">Parent Prep Hub</a></div>
+    <button id="menu-toggle" aria-controls="main-nav" aria-expanded="false">☰</button>
+    <nav id="main-nav" class="main-nav" hidden>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="resources.html" class="nav-link">Resources</a>
+      <a href="reviews.html" class="nav-link">Reviews</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Essential Resources for Expecting Parents</h1>
+
+    <section class="controls">
+      <label>
+        Search:
+        <input id="search" type="search" placeholder="Search resources...">
+      </label>
+      <label>
+        Category:
+        <select id="filter-category">
+          <option value="">All</option>
+        </select>
+      </label>
+      <label>
+        View:
+        <select id="view-toggle">
+          <option value="grid">Grid</option>
+          <option value="list">List</option>
+        </select>
+      </label>
+    </section>
+
+    <section id="resources-list" class="resources-list" aria-live="polite">
+      <!-- dynamically inserted resource cards (15+) -->
+    </section>
+
+    <p class="note">Click "More" on any card to open a detailed modal.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Parent Prep Hub — <a href="attributions.html">Attributions</a></p>
+    <p><a href="https://youtube.com" target="_blank" rel="noopener">Video demo (link)</a></p>
+  </footer>
+
+  <dialog id="modal" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <button class="btn-close" aria-label="Close">✕</button>
+    <h2 id="modal-title"></h2>
+    <div id="modal-desc"></div>
+  </dialog>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
