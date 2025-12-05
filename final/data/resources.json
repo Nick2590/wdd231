@@ -31,7 +31,7 @@
     "title": "Pediatrician Visit Guide",
     "category": "Health & Development",
     "url": "https://example.com/pediatrician-visit",
-    "image": "images/pediatrician.jpg",
+    "image": "images/pediatrician.wedp",
     "source": "Child Health",
     "description": "What to expect at newborn checkups, common vaccines, and questions to ask your pediatrician."
   },
@@ -49,7 +49,7 @@
     "title": "Diapering 101",
     "category": "Care",
     "url": "https://example.com/diapering-101",
-    "image": "images/diaper.jpg",
+    "image": "images/diaper.webp",
     "source": "Parenting Hub",
     "description": "How to change diapers, tips for preventing rash, and eco-friendly diapering options."
   },
@@ -58,7 +58,7 @@
     "title": "Car Seat Buying Guide",
     "category": "Gear",
     "url": "https://example.com/car-seat-guide",
-    "image": "images/carseat.jpg",
+    "image": "images/carseat.webp",
     "source": "Travel Safe",
     "description": "How to choose a car seat, install it correctly, and the laws to know for your area."
   },
@@ -67,7 +67,7 @@
     "title": "Postpartum Recovery Tips",
     "category": "Health & Wellness",
     "url": "https://example.com/postpartum-recovery",
-    "image": "images/postpartum.jpg",
+    "image": "images/postpartum.webp",
     "source": "Mom Care",
     "description": "Physical and emotional recovery tips for the postpartum period, including support resources."
   },
@@ -76,7 +76,7 @@
     "title": "Feeding Schedules",
     "category": "Feeding",
     "url": "https://example.com/feeding-schedules",
-    "image": "images/feeding.jpg",
+    "image": "images/feeding.webp",
     "source": "Nutrition for Babies",
     "description": "Examples of feeding schedules for newborns and how to identify hunger cues."
   },
@@ -85,7 +85,7 @@
     "title": "Infant CPR Quick Guide",
     "category": "Safety",
     "url": "https://example.com/infant-cpr",
-    "image": "images/cpr.jpg",
+    "image": "images/cpr.webp",
     "source": "First Aid Org",
     "description": "Step-by-step instructions on infant CPR and emergency response basics."
   },
@@ -94,7 +94,7 @@
     "title": "Swaddling Techniques",
     "category": "Care",
     "url": "https://example.com/swaddling",
-    "image": "images/swaddle.jpg",
+    "image": "images/swaddle.webp",
     "source": "Baby Care",
     "description": "Safe swaddling methods and when to stop swaddling your baby."
   },
@@ -103,7 +103,7 @@
     "title": "Budgeting for Baby",
     "category": "Planning",
     "url": "https://example.com/budgeting-baby",
-    "image": "images/budget.jpg",
+    "image": "images/budget.webp",
     "source": "Finance for Families",
     "description": "A practical guide to planning finances, saving, and estimating first-year costs."
   },
@@ -112,7 +112,7 @@
     "title": "Preparing Your Home",
     "category": "Planning",
     "url": "https://example.com/prepare-home",
-    "image": "images/homeprep.jpg",
+    "image": "images/homeprep.webp",
     "source": "Home & Family",
     "description": "Room setup, safety checks, and items to have ready before baby arrives."
   },
@@ -121,7 +121,7 @@
     "title": "Newborn Bathing Tips",
     "category": "Care",
     "url": "https://example.com/newborn-bathing",
-    "image": "images/bath.jpg",
+    "image": "images/bath.webp",
     "source": "Healthy Baby",
     "description": "How to bathe a newborn safely and gently, plus recommended products."
   },
@@ -130,7 +130,7 @@
     "title": "Mental Health for New Parents",
     "category": "Health & Wellness",
     "url": "https://example.com/parent-mental-health",
-    "image": "images/mentalhealth.jpg",
+    "image": "images/mentalhealth.webp",
     "source": "Wellness Center",
     "description": "Recognizing postpartum depression and anxiety and where to seek help."
   }
