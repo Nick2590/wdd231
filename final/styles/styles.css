@@ -66,3 +66,26 @@ dialog[open]{box-shadow:0 10px 40px rgba(0,0,0,.2)}
   #menu-toggle{display:inline-block}
   .main-nav{position:absolute;left:1rem;right:1rem;top:64px;background:var(--bg);padding:1rem;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.08)}
 }
+/* DEFAULT: Mobile first */
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+nav ul {
+    display: none; /* Hide menu on mobile */
+    flex-direction: column;
+}
+
+/* DESKTOP: 640px and above */
+@media (min-width: 640px) {
+    .hamburger {
+        display: none; /* Hide the 3 lines on larger screens */
+    }
+
+    nav ul {
+        display: flex;  /* Show navigation links horizontally */
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
