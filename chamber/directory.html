@@ -73,8 +73,11 @@
 
     // Load members.json
     async function loadMembers() {
+        if (!memberContainer) return;
+        
         try {
-            const response = await fetch('data/members.json');
+            const response = await fetch('../data/members.json');
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const members = await response.json();
 
             memberContainer.innerHTML = '';

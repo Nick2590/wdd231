@@ -2,8 +2,11 @@
 const spotlightContainer = document.querySelector('#spotlight-container');
 
 async function loadSpotlights() {
+    if (!spotlightContainer) return;
+    
     try {
-        const response = await fetch('data/members.json');
+        const response = await fetch('../data/members.json');
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const members = await response.json();
 
         // Filter only Gold (3) and Silver (2) members
